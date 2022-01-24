@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="img-galery.css" />
+  </head>
+  <body>
+    <div class="container satu">
+      <div class="box" style="border: 1px solid black"></div>
+    </div>
+    <div class="container dua">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+  <script>
+    const color = ["rgb(207, 106, 135)", "rgb(99, 205, 218)", "rgb(119, 139, 235)"];
+    const box = document.querySelectorAll(".box");
+
+    let i = 1;
+    color.forEach(function (e) {
+      console.log(e);
+      box[i].style.backgroundColor = e;
+      i++;
+    });
+  </script>
+</html>

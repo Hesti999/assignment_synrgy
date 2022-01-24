@@ -1,0 +1,18 @@
+.container {
+  padding: 50px 0;
+}
+
+.container.satu .box {
+  display: block;
+  margin: 0px auto;
+}
+
+.container.dua {
+  display: flex;
+  justify-content: space-around;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+}
