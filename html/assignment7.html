@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0 auto;
+        padding: 0;
+      }
+      section {
+        justify-content: space-between;
+        display: flex;
+      }
+      .container.main {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+      }
+
+      .box-main {
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        border: 2px solid black;
+        /* animation: animate 10s linear infinite; */
+      }
+
+      .button {
+        margin-bottom: 50px;
+        width: 100px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="container satu">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="container main">
+        <button class="button" style="float: right">Reset</button>
+        <div class="box-main"></div>
+      </div>
+      <div class="container tiga">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </section>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      const color = ["#f3a683", "#f7d794", "#778beb", "#e77f67", "#cf6a87", "#786fa6", "#f8a5c2", "#63cdda", "#ea8685", "#596275"];
+      const box = $(".box");
+      $.each(box, function (i, val) {
+        $(this).css("background-color", color[i]);
+        $(this).click(function () {
+          $(".box-main").css("background-color", color[i]);
+          $(".box-main").css("border", "0px solid black");
+        });
+      });
+      $(".button").click(function () {
+        $(".box-main").css("background-color", "white");
+        $(".box-main").css("border", "2px solid black");
+      });
+    });
+
+    //-----------Menggunakan JS---------------
+    // for (let i = 0; i <= $(".box"); i++) {
+    //   // $(".box").css("background-color", "red");
+    //   console.log(i);
+
+    // const box = document.querySelectorAll(".box");
+    // console.log(box);
+    // const mainBox = document.querySelector(".box-main");
+    // for (let i = 0; i <= box.length; i++) {
+    //   box[i].style.backgroundColor = color[i];
+    //   box[i].addEventListener("click", function () {
+    //     mainBox.style.backgroundColor = box[i].style.backgroundColor;
+    //     mainBox.style.border = "0px solid white";
+    //   });
+    // }
+  </script>
+</html>
